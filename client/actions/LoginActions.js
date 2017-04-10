@@ -21,7 +21,7 @@ function loginSuccessful(email, isLoggedIn) {
 module.exports = {
     getLogin: function getLogin() {
         // Getting if we are logged in or not. If we are, update the Redux user to the logged in data.
-        return fetch(API.Login, API.GET_CONFIG)
+        return fetch(API.LOGIN, API.GET_CONFIG)
         .then(Helpers.checkStatus)
         .then(Helpers.parseJSON)
         .then((json) => {
