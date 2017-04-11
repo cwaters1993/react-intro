@@ -42,7 +42,9 @@ class AuthPage extends React.Component {
         return (
             <div className="auth">
                 <div className="login">
-                    <LoginForm loginFunction={loginActions.login} />
+                    <div className="logincontainer">
+                        <LoginForm loginFunction={loginActions.login} />
+                    </div>
                 </div>
                 Hello World!
             </div>

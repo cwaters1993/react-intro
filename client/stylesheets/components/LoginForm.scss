@@ -1,0 +1,25 @@
+.loginform {
+	text-align: center;
+	padding: 32px;
+	.email {
+		margin-bottom: 6px;
+		.Form-control {
+			width: 100%;
+			height: 62px;
+		}
+	}
+	.password {
+		margin-bottom: 6px;
+		.Form-control {
+			width: 100%;
+			height: 62px;
+		}
+	}
+	.btn {
+		border-color: red;
+		background-color: red;
+		color: white;
+		width: 100%;
+		height: 62px;
+	}
+}

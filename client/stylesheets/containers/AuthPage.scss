@@ -3,6 +3,13 @@
 .auth {
     height: 100%;
     .login {
-
+    	display: flex;
+    	width: 100%;
+    	justify-content: center;
+    	.logincontainer {
+    		width: 500px;
+    		border: 1px solid #dce0e0;
+    		text-align: center;
+    	}
     }
 }
