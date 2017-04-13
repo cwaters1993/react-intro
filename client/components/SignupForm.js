@@ -5,9 +5,9 @@
 */
 
 import React from 'react';
-import "../stylesheets/components/LoginForm.scss"
+import "../stylesheets/components/SignupForm.scss"
 
-class LoginForm extends React.Component {
+class SignupForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
     render() {
         // This is where you place your HTML. Inside of here goes components and other HTML elements
         return (
-            <form className="loginform" onSubmit={this.submitForm}>
+            <form className="signupform" onSubmit={this.submitForm}>
                 <div className="email">
                     <div className="email-container">
                         <input className="form-control" type="email" placeholder="Email Address" required />
@@ -54,11 +54,11 @@ class LoginForm extends React.Component {
                     </div>
                 </div>
                 <button className="btn" type="Submit">
-                    Log in
+                    Sign up
                 </button>
             </form>
         );
     }
 }
 
-export default LoginForm;
+export default SignupForm;

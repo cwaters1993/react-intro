@@ -2,11 +2,13 @@
 
 .auth {
     height: 100%;
-    .login {
+    .login, .signup {
+    	height: 100%;
     	display: flex;
     	width: 100%;
     	justify-content: center;
-    	.logincontainer {
+    	align-items: center;
+    	.logincontainer, .signupcontainer {
     		width: 500px;
     		border: 1px solid #dce0e0;
     		text-align: center;

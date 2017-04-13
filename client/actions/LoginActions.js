@@ -39,5 +39,17 @@ module.exports = {
                 return dispatch(loginSuccessful(json.email, true));
             });
         }
-    }
+    },
+
+    signup: function signup(data) {
+        // Dispatch tells Redux to send to store
+        return dispatch => {
+            return fetch(API.SIGNUP, API.POST_CONFIG(data))
+            .then(Helpers.checkStatus)
+            .then(Helpers.parseJSON)
+            .then((json) => {
+                return dispatch(loginSuccessful(json.email, true));
+            });
+        }
+    },
 }

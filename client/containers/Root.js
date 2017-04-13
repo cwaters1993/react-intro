@@ -8,6 +8,7 @@ import React from 'react';
 import { Provider, connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Routes from './routes';
+import '../stylesheets/containers/Root.scss'
 
 class Root extends React.Component {
     
