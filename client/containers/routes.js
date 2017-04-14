@@ -15,6 +15,7 @@ import { applyRouterMiddleware, Router, Route, IndexRoute, Redirect} from 'react
 
 // Containers
 import AuthPage from '../containers/AuthPage.js'
+import LoginReferral from '../containers/LoginReferral.js'
 
 class Routes extends React.Component {
 
@@ -27,6 +28,7 @@ class Routes extends React.Component {
             <Router history={this.props.history} routes={this._routes} onUpdate={() => window.scrollTo(0, 0)}>
                 <Route path="/login" component={AuthPage} login={true}/>
                 <Route path="/signup" component={AuthPage} login={false}/>
+                <Route path="/" component={LoginReferral}/>
             </Router>
         );
     }

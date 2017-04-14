@@ -16,14 +16,31 @@ class LoginForm extends React.Component {
         this.submitFormFunction = this.submitFormFunction.bind(this);
 
         this.state = {
+            password: "",
+            email: ""
+        };  
 
-        }
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
     }
     
+    handleEmailChange(event) {
+        // Sets the state variable email when field is updated
+        this.setState({email: event.target.value});
+    }
+
+    handlePasswordChange(event) {
+        // Sets the state variable password when field is updated
+        this.setState({password: event.target.value});
+    }
+
     submitForm = (event) => {
         // ES6 function. Sets variable submitForm as a function with event as the input. Autobinds to this (important).
         // Run this when the form gets submitted, prevent the default action
         event.preventDefault();
+        var data = {password: this.state.password, email: this.state.email};
+        this.props.loginFunction(data);
     }
 
     submitFormFunction(event) {
@@ -43,13 +60,13 @@ class LoginForm extends React.Component {
             <form className="loginform" onSubmit={this.submitForm}>
                 <div className="email">
                     <div className="email-container">
-                        <input className="form-control" type="email" placeholder="Email Address" required />
+                        <input className="form-control" value={this.state.email} onChange={this.handleEmailChange} type="email" placeholder="Email Address" required />
                         <i className="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div className="password">
                     <div className="password-container">
-                        <input className="form-control" type="password" placeholder="Password" required />
+                        <input className="form-control" value={this.state.password} onChange={this.handlePasswordChange} type="password" placeholder="Password" required />
                         <i className="fa fa-lock" />
                     </div>
                 </div>

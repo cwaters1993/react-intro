@@ -12,7 +12,7 @@ if(process.env.RDS_HOSTNAME) {
 } else if (env == 'test') {
     connection = { database : 'react_test' };
 } else {
-    connection = { database : 'react_intro' };
+    connection = { database : 'react_intro', user: 'postgres', password: 'superrandom7' };
 }
 
 module.exports = {
