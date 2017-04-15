@@ -11,6 +11,9 @@ import SignupForm from '../components/SignupForm';
 // LoginActions
 import LoginActions from '../actions/LoginActions';
 
+//Browser history for login redirrect
+import { browserHistory } from 'react-router'
+
 class LoginReferral extends React.Component {
 
     constructor(props) {
@@ -27,8 +30,9 @@ class LoginReferral extends React.Component {
     	var { user, loginActions } = this.props;
 
     	loginActions.getLogin().then(function(result) {
-			console.log(result);
-    	});
+			if (!result.isLoggedIn) {
+				browserHistory.push('/login')				
+			}});
     }
 
     render() {
