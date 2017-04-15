@@ -30,7 +30,7 @@ module.exports = {
             })
             .catch((error) => {
                 return dispatch(loginSuccessful('', false));
-            })
+            });
         }
     },
 
@@ -42,6 +42,9 @@ module.exports = {
             .then(Helpers.parseJSON)
             .then((json) => {
                 return dispatch(loginSuccessful(json.email, true));
+            })
+            .catch((error) => {
+                return dispatch(loginSuccessful('', false));
             });
         }
     },
