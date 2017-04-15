@@ -7,6 +7,9 @@
 import React from 'react';
 import "../stylesheets/components/LoginForm.scss"
 
+//Browser history for login redirrect
+import { browserHistory } from 'react-router'
+
 class LoginForm extends React.Component {
 
     constructor(props) {
@@ -40,7 +43,11 @@ class LoginForm extends React.Component {
         // Run this when the form gets submitted, prevent the default action
         event.preventDefault();
         var data = {password: this.state.password, email: this.state.email};
-        this.props.loginFunction(data);
+        this.props.loginFunction(data).then(function(result) {
+            if (result.isLoggedIn) {
+                browserHistory.push('/')               
+            }
+        });
     }
 
     submitFormFunction(event) {

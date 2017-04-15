@@ -20,6 +20,9 @@ import LoginActions from '../actions/LoginActions';
 // Stylesheets .scss is like .css but it has built in scoping
 import '../stylesheets/containers/AuthPage.scss';
 
+//Browser history for login redirrect
+import { browserHistory } from 'react-router'
+
 class AuthPage extends React.Component {
 
     constructor(props) {
@@ -38,8 +41,8 @@ class AuthPage extends React.Component {
         loginActions.getLogin().then(function(result) {
             if (result.isLoggedIn) {
                 browserHistory.push('/')               
-            }});
-    }
+            }
+        });
     }
 
     render() {
