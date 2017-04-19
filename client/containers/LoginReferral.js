@@ -37,7 +37,9 @@ class LoginReferral extends React.Component {
 
     render() {
     	return (
-    		<div> hello </div>
+            <button className="btn" type="Submit">
+                Log in
+            </button>
     	);
     };
 }
