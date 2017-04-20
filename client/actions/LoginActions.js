@@ -64,7 +64,7 @@ module.exports = {
     logout: function signup(data) {
         // Dispatch tells Redux to send to store
         return dispatch => {
-            return fetch(API.SIGNUP, API.POST_CONFIG(data))
+            return fetch(API.LOGOUT, API.POST_CONFIG(data))
             .then(Helpers.checkStatus)
             .then(Helpers.parseJSON)
             .then((json) => {

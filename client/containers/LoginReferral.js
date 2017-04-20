@@ -12,7 +12,10 @@ import SignupForm from '../components/SignupForm';
 import LoginActions from '../actions/LoginActions';
 
 //Browser history for login redirrect
-import { browserHistory } from 'react-router'
+import { browserHistory } from 'react-router';
+
+//MainBody of page
+import MainBody from '../components/MainBody';
 
 class LoginReferral extends React.Component {
 
@@ -22,6 +25,15 @@ class LoginReferral extends React.Component {
         this.state = {
 
         }
+
+        this.logoutfunction = this.logoutfunction.bind(this)
+    }
+
+    logoutfunction(event) {
+    	this.props.loginActions.logout().then(function(result) {
+    		if (!result.isLoggedIn) {
+    			browserHistory.push('/login')
+    		}});
     }
 
     componentDidMount() {
@@ -37,9 +49,12 @@ class LoginReferral extends React.Component {
 
     render() {
     	return (
-            <button className="btn" type="Submit">
-                Log in
-            </button>
+    		<div>
+				<button onClick={this.logoutfunction}>
+					Log out
+				</button>
+				<MainBody />
+			</div>
     	);
     };
 }

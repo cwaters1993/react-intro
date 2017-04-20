@@ -72,7 +72,7 @@ class AuthPage extends React.Component {
                 <div className="auth">
                     <div className="signup">
                         <div className="signupcontainer">
-                            <SignupForm signupFunction={loginActions.signup} blah={"boo"} />
+                            <SignupForm signupFunction={loginActions.signup} />
                             <div className="bottombar">
                                 Already have an account?
                                 <a href="/login" className="btn">
