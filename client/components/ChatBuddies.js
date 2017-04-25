@@ -14,17 +14,17 @@ class ChatBuddies extends React.Component {
     	return(
     		<div className="chatbuddies">
     			<div className="icon">
-    				<Initicon size={60} text="Christian Waters" seed={1}/>
+    				<Initicon size={60} text={this.props.name} seed={1}/>
     			</div>
     			<div className="text">
     				<div className="name">
-    					Christian Waters
+    					{this.props.name}
     				</div>
     				<div className="time">
-    					9:30 PM
+    					{this.props.time}
     				</div>
     				<div className="body">
-    					Yada Yada Yada Yada Yada Yada Yada
+    					{this.props.text}
     				</div>
     			</div>	
     		</div>

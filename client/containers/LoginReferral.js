@@ -80,14 +80,7 @@ class LoginReferral extends React.Component {
 					</a>
 				</header>
 	    		<div className="middleleft">
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
-	    			<ChatBuddies/>
+	    			<ChatBuddies name="BC Waters" time="6:14 PM" text="This is a story about yada yada yada"/>
 	    		</div>
 	    		<div className="middleright">
     				Middle Right
