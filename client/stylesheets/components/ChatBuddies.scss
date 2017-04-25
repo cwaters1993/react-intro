@@ -1,0 +1,40 @@
+.chatbuddies{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width:100%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #7d7d7d;
+	height: 12.5%;
+
+	.icon{
+		width:30%;
+		height: 100%;
+		padding:10px;
+	}
+	.text{
+		width:70%;
+		height:100%;
+		position: relative;
+		padding:10px;
+		.name{
+			position: absolute;
+			left: 0px;
+			font-weight: bold;
+		}
+		.time{
+			position: absolute;
+			right: 0px;
+			font-weight: bold;
+			padding-right:10px;
+		}
+		.body{
+			position: absolute;
+			top: 30px;
+			left: 0px;
+			padding-right:10px;
+		}
+
+	}
+}

@@ -1,0 +1,114 @@
+.loginreferral {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width:100%;
+	height:100%;
+	.topleft, .chatheader, .middleleft, .middleright, .bottomleft, .bottomright{
+		border-style: solid;
+		border-color: #7d7d7d;
+		border-width: 1px;
+		background-color: #c3c3c3;
+	}
+	.topleft{
+		width: 30%;
+		height: 10%;
+		display: flex;
+    	align-items: center;	
+    	display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+    	.buttonbarcontainer{
+    		height:30%;
+    		width:100%;
+    		padding:3px;
+    		.fa-times-circle{
+    			color: red;
+    			padding:3px;
+    		}
+    		.fa-plus-square{
+    			color: green;
+    			padding:3px;
+    		}
+    		.fa-minus-square{
+    			color:yellow;
+    			padding:3px;
+    		}
+    	}
+    	.searchbarcontainer{
+    		height:70%;
+    		position: relative;
+    		width: 90%;
+    		.searchbar{
+    			width:100%;
+    			padding: 5px;
+				border-radius: 23px;
+				outline-width: 0;
+				background-color: #ababab;
+				transform: translateY(30%);
+    		}
+    		.fa {
+    			position: absolute;
+    			right: 10px;
+    			top: 50%;
+				transform: translateY(-50%);
+    		}
+    	}
+    	.fa {
+    		margin-left: auto;
+    		font-size: 20px;
+    	}	
+	}
+	.chatheader {
+		width: 70%;
+		height:10%;
+		display: flex;
+    	align-items: center;	
+    	padding: 20px;	
+    	.headerleft {
+		}
+		.headerright {
+			margin-left: auto;
+		}
+	}
+	.middleleft{
+		width: 30%;
+		height: 85%;
+	}
+	.middleright{
+		width: 70%;
+		height: 85%;
+		background-color: white;
+	}
+	.bottomleft{
+		width: 30%;
+		height: 5%;
+	}
+	.bottomright{
+		width: 70%;
+		height: 5%;
+		display: flex;
+    	align-items: center;	
+    	padding: 20px;	
+    	.chatbarcontainer{
+    		position: relative;
+    		width: 90%;
+    		.chatbar{
+    			width:100%;
+    			padding: 5px;
+				border-radius: 23px;
+				outline-width: 0;
+    		}
+    		.fa {
+    			position: absolute;
+    			right: 10px;
+    			top: 50%;
+				transform: translateY(-50%);
+    		}
+    	}
+    	.fa {
+    		margin-left: auto;
+    		font-size: 20px;
+    	}
+	}
+}

@@ -8,6 +8,9 @@ import { bindActionCreators } from 'redux';
 import LoginForm from '../components/LoginForm';
 import SignupForm from '../components/SignupForm';
 
+// Chatbuddies component for left sidebar
+import ChatBuddies from '../components/ChatBuddies'
+
 // LoginActions
 import LoginActions from '../actions/LoginActions';
 
@@ -16,6 +19,9 @@ import { browserHistory } from 'react-router';
 
 //MainBody of page
 import MainBody from '../components/MainBody';
+
+//Stylesheet
+import "../stylesheets/containers/LoginReferral.scss"
 
 class LoginReferral extends React.Component {
 
@@ -48,12 +54,56 @@ class LoginReferral extends React.Component {
     }
 
     render() {
+    	// 				<button onClick={this.logoutfunction}>
+		//			Log out
+		//		</button>
     	return (
-    		<div>
-				<button onClick={this.logoutfunction}>
-					Log out
-				</button>
-				<MainBody />
+    		<div className="loginreferral">
+    		    <div className="topleft">
+    		    	<div className="buttonbarcontainer">
+    		    		<i className="fa fa-times-circle" />
+    		    		<i className="fa fa-minus-square" />
+    		    		<i className="fa fa-plus-square" />
+    		    	</div>
+    				<div className="searchbarcontainer">
+	    				<input type="text" className="searchbar" placeholder="Search"/>
+	    				<i className="fa fa-search" />
+	    			</div>
+	    			<i className="fa fa-pencil-square-o" />
+    			</div>
+    			<header className="chatheader">
+					<div className="headerleft">
+						To: Waters Christian
+					</div>
+					<a href="www.google.com" className="headerright">
+						Details
+					</a>
+				</header>
+	    		<div className="middleleft">
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    			<ChatBuddies/>
+	    		</div>
+	    		<div className="middleright">
+    				Middle Right
+	    		</div>
+	    		<div className="bottomleft">
+	    			Patrick
+	    			<br/>
+	    			Offline
+	    		</div>
+	    		<div className="bottomright">
+	    			<div className="chatbarcontainer">
+	    				<input type="text" className="chatbar" placeholder="iMessage"/>
+	    				<i className="fa fa-smile-o"/>
+	    			</div>
+	    			<i className="fa fa-microphone" />
+	    		</div>
 			</div>
     	);
     };
