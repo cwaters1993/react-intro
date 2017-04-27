@@ -1,8 +1,8 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookTokenStrategy = require('passport-facebook-token');
-var User     = require('./user');
-var FacebookUser = require('./facebookUser');
+var User     = require('../models/user');
+var FacebookUser = require('../models/facebookUser');
 var FacebookConfig = require('./fb');
 
 

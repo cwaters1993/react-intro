@@ -1,4 +1,4 @@
-var bookshelf = require('./bookshelf');
+var bookshelf = require('../config/bookshelf');
 var User = require('./user');
 var Chance = require('chance');
 var chance = new Chance();

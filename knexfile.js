@@ -1,4 +1,4 @@
-var env = require('./backend/env');
+var env = require('./backend/config/env');
 var connection;
 if(process.env.RDS_HOSTNAME) {
   // Don't worry about this for now, only relevant if you want to deploy

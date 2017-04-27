@@ -1,8 +1,8 @@
-var bookshelf = require('./bookshelf');
+var bookshelf = require('../config/bookshelf');
 var bcrypt = require('bcrypt');
 var Chance = require('chance');
 var chance = new Chance();
-var env = require('./env');
+var env = require('../config/env');
 var Promise = require('bluebird');
 var _ = require('lodash');
 

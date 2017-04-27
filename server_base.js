@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const app = express();
-const passport = require('./backend/passportConfig');
+const passport = require('./backend/config/passportConfig');
 
 app.use(bodyParser.json());
 app.use(cookieParser());

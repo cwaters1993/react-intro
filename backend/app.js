@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var secureCookies = false; // we only secure them for production so we can test without https
-var env      = require('./env');
+var env      = require('./config/env');
 
-var passport = require('./passportConfig');
-var User     = require('./user');
+var passport = require('./config/passportConfig');
+var User     = require('./models/user');
 
 router.post('/signup', function(req, res) {
     // Signup for service
