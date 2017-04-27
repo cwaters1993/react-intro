@@ -6,9 +6,9 @@
 	height:100%;
 	.topleft, .chatheader, .middleleft, .middleright, .bottomleft, .bottomright{
 		border-style: solid;
-		border-color: #7d7d7d;
+		border-color: #cacaca;
 		border-width: 1px;
-		background-color: #c3c3c3;
+		background-color: #E5E5EA;
 	}
 	.topleft{
 		width: 30%;
@@ -79,6 +79,33 @@
 		width: 70%;
 		height: 85%;
 		background-color: white;
+		position: relative;
+		.myText{
+    		display: flex;
+    		flex-direction: row-reverse;
+    		.justText{
+    			padding: 3px;
+	    		border-style: solid;
+	    		border-radius: 16px;
+	    		border-color: #1388F9;
+	    		border-width: 1px;
+	    		background-color: #1388F9;
+	    		color: white;
+	    		margin: 5px;
+    		}
+		}
+		.theirText{
+			display: flex;
+			.justText{
+				padding: 3px;
+				border-style: solid;
+				border-radius: 16px;
+				border-color: #E5E5EA;
+				border-width: 1px;
+				background-color: #E5E5EA;
+				margin: 5px;
+			}
+		}
 	}
 	.bottomleft{
 		width: 30%;

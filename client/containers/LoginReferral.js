@@ -29,7 +29,18 @@ class LoginReferral extends React.Component {
         super(props);
 
         this.state = {
-
+        	chatBuddies: [
+                {name: 'BW Waters', time: '9:30', text: 'This is a story about yada yada yada'},
+                {name: 'Patrick Lu', time: '9:34', text: 'This is a story about yada yada yada'},
+                {name: 'Tim Koo', time: '9:33', text: 'This is a story about yada yada yada'},
+                {name: 'Chrsitian Waters', time: '9:36', text: 'This is a story about yada yada yada'},
+                {name: 'yo', time: '9:37', text: 'This is a story about yada yada yada'}
+            ],
+            activeText: [
+                {id: 0, 'text': 'hello!', name: 'BW Waters', time: '9:31'},
+                {id: 1, 'text': 'can we start?', name: 'BW Waters', time: '9:32'},
+                {id: 2, 'text': 'sure', name: 'me', time: '9.33'},
+            ]
         }
 
         this.logoutfunction = this.logoutfunction.bind(this)
@@ -57,7 +68,28 @@ class LoginReferral extends React.Component {
     	// 				<button onClick={this.logoutfunction}>
 		//			Log out
 		//		</button>
-    	return (
+		var buddies = this.state.chatBuddies.map((buddy, index) => <ChatBuddies key={'chat_buddy'+index}name={buddy.name} time={buddy.time} text={buddy.text}/>);   
+		var chat = this.state.activeText.map((message, index) => {
+			if(message.name=='me') {
+				return(
+					<div className="myText" key={message.id}>
+						<div className="justText">
+							{message.text}
+						</div>
+					</div>
+				)
+			}
+			else {
+				return(
+					<div className="theirText" key={message.id}>
+						<div className="justText">
+							{message.text}
+						</div>
+					</div>
+				)
+			};
+		}); 	
+		return (
     		<div className="loginreferral">
     		    <div className="topleft">
     		    	<div className="buttonbarcontainer">
@@ -80,10 +112,10 @@ class LoginReferral extends React.Component {
 					</a>
 				</header>
 	    		<div className="middleleft">
-	    			<ChatBuddies name="BC Waters" time="6:14 PM" text="This is a story about yada yada yada"/>
+	    			{buddies}
 	    		</div>
 	    		<div className="middleright">
-    				Middle Right
+    				{chat}
 	    		</div>
 	    		<div className="bottomleft">
 	    			Patrick
